@@ -6,3 +6,4 @@ version: 2.1
       - run: git remote add upstream https://github.com/na-ka-mu-ra-/tes
       - run: git checkout master
       - run: git push origin master
+
