@@ -20,7 +20,6 @@ jobs:
       - run: git checkout master
       - run: git pull --no-edit upstream master
       - run: git push origin master
-
 workflows: 
   version: 2
   cron_workflow: 
