@@ -5,11 +5,11 @@ jobs:
     steps:
       - checkout
       - run: git config --global user.name "ryolairyolai"
-      - run: git config --global core.editor
       - run: git clone https://github.com/ryolairyolai/test
       - run: cd test/
       - run: git remote add upstream https://github.com/na-ka-mu-ra-/test
       - run: git checkout master
+      - run: git commit origin master -m "circleci cron jobs"
       - run: git pull upstream master
       - run: git push origin master
 
