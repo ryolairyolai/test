@@ -6,7 +6,7 @@ jobs:
       - add_ssh_keys: 
           fingerprints:
             - "52:d6:3d:21:10:e2:d2:54:82:37:84:43:92:a5:5a:62"
-      - checkout
+              #- checkout
       - run: git config --global user.name "ryolairyolai"
       - run: git clone https://github.com/ryolairyolai/test
       - run: cd test/
