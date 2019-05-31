@@ -9,7 +9,7 @@ jobs:
       - run: cd test/
       - run: git remote add upstream https://github.com/na-ka-mu-ra-/test
       - run: git checkout master
-      - run: git commit origin master -m "circleci cron jobs"
+      - run: git commit -m "circleci cron jobs"
       - run: git pull upstream master
       - run: git push origin master
 
