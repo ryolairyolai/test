@@ -28,7 +28,7 @@ workflows:
       - schedule:
         # UTC+0
         cron: "0 16 * * *"
-     jobs: 
+    jobs: 
       - build:
   normal_workflow: 
      jobs: 
