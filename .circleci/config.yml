@@ -6,7 +6,6 @@ jobs:
       FORK_URL: 'https://github.com/ryolairyolai/test'
       ORIG_URL: 'https://github.com/na-ka-mu-ra-/test'
       DIR: 'test'
-      USER: 'ryolairyolai'
     steps:
       - add_ssh_keys: 
           fingerprints:
@@ -14,8 +13,6 @@ jobs:
       - checkout
       - run: git clone $FORK_URL
         #- run: echo "git clone $FORK_URL"
-        #- run: git config --global user.name $USER
-        #- run: echo "git config --global user.name $USER"
       - run: cd  $DIR
         #- run: echo "cd  $DIR"
       - run: git remote add upstream $ORIG_URL
