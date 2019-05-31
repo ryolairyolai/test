@@ -7,11 +7,10 @@ jobs:
       ORIG_URL: 'https://github.com/na-ka-mu-ra-/test'
       DIR: 'test'
       USER: 'ryolairyolai'
-      FINGERPRINTS: '52:d6:3d:21:10:e2:d2:54:82:37:84:43:92:a5:5a:62'
     steps:
       - add_ssh_keys: 
           fingerprints:
-                  - $FINGERPRINTS 
+                  - '52:d6:3d:21:10:e2:d2:54:82:37:84:43:92:a5:5a:62'
       - checkout
       - run: git clone $FORK_URL
       - run: git config --global user.name $USER
