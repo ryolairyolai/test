@@ -3,8 +3,8 @@ jobs:
   build:
     machine: true
     environment:
-      FORK_URL=https://github.com/ryolairyolai/test
-      ORIG_URL=https://github.com/na-ka-mu-ra-/test
+      FORK_URL="https://github.com/ryolairyolai/test"
+      ORIG_URL="https://github.com/na-ka-mu-ra-/test"
       CD_DIR=test
       EXEC_USR=ryolairyolai
     steps:
