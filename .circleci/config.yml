@@ -8,9 +8,4 @@ jobs:
       - run: git remote add upstream https://github.com/na-ka-mu-ra-/test
       - run: git checkout master
       - run: git push origin master
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
 
