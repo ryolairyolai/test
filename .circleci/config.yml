@@ -3,16 +3,19 @@ jobs:
   build:
     machine: true
     environment:
-      HOGE="test"
+      FORK_URL=https://github.com/ryolairyolai/test
+      ORIG_URL=https://github.com/na-ka-mu-ra-/test
+      CD_DIR=test
+      EXEC_USR=ryolairyolai
     steps:
       - add_ssh_keys: 
           fingerprints:
             - "52:d6:3d:21:10:e2:d2:54:82:37:84:43:92:a5:5a:62"
       - checkout
-      - run: git clone https://github.com/ryolairyolai/test$HOGE
-      - run: git config --global user.name "ryolairyolai"
-      - run: cd test/
-      - run: git remote add upstream https://github.com/na-ka-mu-ra-/test
+      - run: git clone $FORK_URL
+      - run: git config --global user.name "$EXEC_USR"
+      - run: cd $CD_DIR
+      - run: git remote add upstream $ORIG_URL
       - run: git checkout master
       - run: git pull --no-edit upstream master
       - run: git push origin master
