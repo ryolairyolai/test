@@ -13,9 +13,13 @@ jobs:
             - '52:d6:3d:21:10:e2:d2:54:82:37:84:43:92:a5:5a:62'
       - checkout
       - run: git clone $FORK_URL
+      - run: echo "git clone $FORK_URL"
       - run: git config --global user.name $USER
+      - run: echo "git config --global user.name $USER"
       - run: cd  $DIR
+      - run: echo "cd  $DIR"
       - run: git remote add upstream $ORIG_URL
+      - run: echo "git remote add upstream $ORIG_URL"
       - run: git checkout master
       - run: git pull --no-edit upstream master
       - run: git push origin master
