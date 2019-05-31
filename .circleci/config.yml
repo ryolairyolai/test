@@ -1,4 +1,4 @@
-TEST=8000
+{hidoi: 8000}
 
 version: 2
 jobs:
