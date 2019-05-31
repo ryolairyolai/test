@@ -20,16 +20,16 @@ jobs:
       - run: git checkout master
       - run: git pull --no-edit upstream master
       - run: git push origin master
-workflows: 
-  version: 2
-  cron_workflow: 
-    triggers:
-      - schedule:
-        # UTC+0
-        cron: "0 16 * * *"
-    jobs: 
-      - build:
-  normal_workflow: 
-     jobs: 
-      - build:
+#workflows: 
+#  version: 2
+#  cron_workflow: 
+#    triggers:
+#      - schedule:
+#        # UTC+0
+#        cron: "0 16 * * *"
+#    jobs: 
+#      - build:
+#  normal_workflow: 
+#     jobs: 
+#      - build:
 
