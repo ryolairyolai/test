@@ -1,15 +1,15 @@
-{hidoi: 8000}
-
 version: 2
 jobs:
   build:
     machine: true
+    environment:
+      HOGE="test"
     steps:
       - add_ssh_keys: 
           fingerprints:
             - "52:d6:3d:21:10:e2:d2:54:82:37:84:43:92:a5:5a:62"
       - checkout
-      - run: git clone https://github.com/ryolairyolai/test
+      - run: git clone https://github.com/ryolairyolai/test$HOGE
       - run: git config --global user.name "ryolairyolai"
       - run: cd test/
       - run: git remote add upstream https://github.com/na-ka-mu-ra-/test
